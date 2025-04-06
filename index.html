@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programación del lado del servidor</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/diseño.css">
+  <style>
+    /* Nuevos estilos para mejorar el diseño */
+    
+    /* Hero section - Portada principal */
+    .hero-section {
+      background: linear-gradient(135deg, #2b2d42, #4a4e69);
+      color: white;
+      padding: 5rem 0;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    
+    /* Tarjetas temáticas con efecto hover */
+    .theme-card {
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+      background-color: #f8f9fa;
+    }
+    
+    .theme-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* Estilo para las imágenes dentro de las tarjetas */
+    .card-img-container {
+      height: 200px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e9ecef;
+    }
+    
+    .card-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    
+    .theme-card:hover .card-img-container img {
+      transform: scale(1.05);
+    }
+    
+    /* Mejoras para el carrusel */
+    .carousel-item img {
+      max-height: 500px;
+      object-fit: cover;
+    }
+    
+    /* Espaciado consistente */
+    .content-section {
+      padding: 3rem 0;
+    }
+    
+    /* Estilo para los títulos de sección */
+    .section-title {
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background: #ff6600;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR: Barra de navegación superior-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="https://github.com/Gallo-On">
+        <img src="images/logo.png" alt="Logo" style="height: 20px;">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html/webappis.html">WebAppis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html/microservicios.html">Microservicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html/nube.html">Apps de la nube</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html/contenedores.html">Contenedores</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION - Sección de portada -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">Programación del lado del servidor</h1>
+      <p class="lead mb-4">Domina las tecnologías que impulsan la web moderna</p>
+      <a href="#temas" class="btn btn-primary btn-lg">Explorar temas</a>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container">
+    <!-- Introducción -->
+    <section class="mb-5">
+      <h2 class="section-title">¿Qué es la programación backend?</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <p class="fs-5">
+            <strong>La programación del lado del servidor</strong> (o <em>backend</em>) es la parte del desarrollo web que se encarga de que las aplicaciones funcionen internamente. 
+            Mientras que el <em>frontend</em> es lo que el usuario ve, el backend es lo que ocurre "detrás de cámaras": la lógica de negocio, las bases de datos, la autenticación, 
+            el manejo de usuarios, y mucho más.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <!-- Carrusel de imágenes -->
+          <div id="techCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-3 overflow-hidden">
+              <div class="carousel-item active">
+                <img src="images/img1.jpg" class="d-block w-100" alt="Tecnologías backend">
+              </div>
+              <div class="carousel-item">
+                <img src="images/img2.jpg" class="d-block w-100" alt="Arquitectura de servidores">
+              </div>
+              <div class="carousel-item">
+                <img src="images/img3.jpg" class="d-block w-100" alt="Desarrollo web">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de temas como tarjetas-->
+    <section id="temas" class="content-section">
+      <h2 class="section-title mb-5">Temas principales</h2>
+      
+      <div class="row g-4">
+        <!-- Tarjeta 1 - WebAppis -->
+        <div class="col-md-6 col-lg-3">
+          <div class="theme-card">
+            <div class="card-img-container">
+              <img src="images/webappis.png" alt="Web APIs">
+            </div>
+            <div class="card-body">
+              <h3 class="h5">WebAppis</h3>
+              <p class="card-text">
+                Tecnologías como REST y GraphQL que permiten la comunicación entre sistemas a través de internet.
+              </p>
+              <a href="html/webappis.html" class="btn btn-outline-primary">Explorar</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tarjeta 2 - Microservicios -->
+        <div class="col-md-6 col-lg-3">
+          <div class="theme-card">
+            <div class="card-img-container">
+              <img src="images/microservicios.jpg" alt="Microservicios">
+            </div>
+            <div class="card-body">
+              <h3 class="h5">Microservicios</h3>
+              <p class="card-text">
+                Arquitectura donde una aplicación se divide en servicios pequeños e independientes.
+              </p>
+              <a href="html/microservicios.html" class="btn btn-outline-primary">Explorar</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tarjeta 3 - Apps de la nube -->
+        <div class="col-md-6 col-lg-3">
+          <div class="theme-card">
+            <div class="card-img-container">
+              <img src="images/nubes.png" alt="Cloud Apps">
+            </div>
+            <div class="card-body">
+              <h3 class="h5">Apps de la nube</h3>
+              <p class="card-text">
+                Desarrollo de aplicaciones escalables utilizando plataformas en la nube.
+              </p>
+              <a href="html/nube.html" class="btn btn-outline-primary">Explorar</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tarjeta 4 - Contenedores -->
+        <div class="col-md-6 col-lg-3">
+          <div class="theme-card">
+            <div class="card-img-container">
+              <img src="images/contenedores.jpg" alt="Contenedores">
+            </div>
+            <div class="card-body">
+              <h3 class="h5">Contenedores</h3>
+              <p class="card-text">
+                Tecnologías como Docker para empaquetar y distribuir aplicaciones.
+              </p>
+              <a href="html/contenedores.html" class="btn btn-outline-primary">Explorar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de información adicional -->
+    <section class="content-section bg-light rounded-3 p-4 mb-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="section-title">¿Por qué aprender backend?</h2>
+                <p>
+                    El desarrollo backend es fundamental para crear aplicaciones web completas y funcionales. A diferencia del frontend que se centra en la experiencia del usuario, el backend maneja:
+                </p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Lógica de negocio</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Bases de datos</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Autenticación y seguridad</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Integración con otros sistemas</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://www.youtube.com/embed/aKAg5FI9aJw" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        class="rounded-3">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</body>
+<footer>
+    <p><a href="html/formulario.html" target="_blank">Llena nuestro formulario para mejorar la página</a></p>
+</footer>
+</html>

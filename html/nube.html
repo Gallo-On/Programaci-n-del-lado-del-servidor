@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desarrollo de aplicaciones para la nube">
+    <title>Desarrollo de Aplicaciones para la Nube</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/diseño.css">
+    <style>
+        /* Estilos personalizados para mantener coherencia */
+        :root {
+            --primary-color: #6c63ff;
+            --secondary-color: #ff6600;
+            --dark-color: #2b2d42;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--dark-color), #4a4e69);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            height: 100%;
+            background-color: var(--light-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .benefit-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .benefit-item:before {
+            content: '\F26E';
+            font-family: bootstrap-icons;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        .cloud-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .img-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (actualizado para coherencia) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://github.com/Gallo-On">
+                <img src="../images/logo.png" alt="Logo" style="height: 20px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/webappis.html">WebAppis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/microservicios.html">Microservicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../html/nube.html">Apps de la nube</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/contenedores.html">Contenedores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Desarrollo de Aplicaciones para la Nube</h1>
+            <p class="lead">Escalabilidad, flexibilidad y disponibilidad en la era digital</p>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <main class="container mb-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h2 class="section-title">¿Qué son las aplicaciones en la nube?</h2>
+                <p class="fs-5">
+                    El desarrollo de aplicaciones para la nube se refiere a la creación de software diseñado específicamente para
+                    ejecutarse en plataformas de computación en la nube. Este enfoque permite a empresas y desarrolladores
+                    aprovechar la escalabilidad, flexibilidad y disponibilidad que ofrecen los servicios en la nube.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="img-container">
+                    <img src="../images/appsnube.jpg" alt="Computación en la nube" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Características Principales -->
+        <section class="mb-5">
+            <h2 class="section-title text-center mb-4">Características Principales</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center">
+                        <i class="bi bi-arrow-up-right-circle cloud-icon"></i>
+                        <h3>Escalabilidad</h3>
+                        <p>Ajuste automático para manejar aumentos o disminuciones en la demanda de recursos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center">
+                        <i class="bi bi-globe cloud-icon"></i>
+                        <h3>Accesibilidad</h3>
+                        <p>Disponible desde cualquier lugar con conexión a Internet en múltiples dispositivos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center">
+                        <i class="bi bi-cash-coin cloud-icon"></i>
+                        <h3>Reducción de costos</h3>
+                        <p>Elimina gastos de infraestructura física con modelos de pago por uso.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card p-4 text-center">
+                        <i class="bi bi-puzzle cloud-icon"></i>
+                        <h3>Integración</h3>
+                        <p>Conexión sencilla con otros servicios y herramientas en la nube.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <h2 class="section-title">Beneficios Clave</h2>
+                    <div class="benefit-item">
+                        <h3>Actualizaciones rápidas</h3>
+                        <p>Implementación continua sin tiempos de inactividad significativos.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Colaboración mejorada</h3>
+                        <p>Equipos distribuidos pueden trabajar juntos en tiempo real.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Continuidad del negocio</h3>
+                        <p>Copia de seguridad y recuperación ante desastres automatizadas.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Seguridad avanzada</h3>
+                        <p>Protección de datos con medidas de seguridad empresarial.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="img-container h-100">
+                        <img src="../images/beneficios nube.jpg" alt="Beneficios de la nube" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herramientas y Tecnologías -->
+        <section class="mb-5">
+            <h2 class="section-title text-center mb-4">Tecnologías Principales</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="../images/aws.png" alt="AWS" class="img-fluid mb-3" style="max-height: 60px;">
+                            <h3>Plataformas Cloud</h3>
+                            <ul class="list-unstyled">
+                                <li>AWS</li>
+                                <li>Microsoft Azure</li>
+                                <li>Google Cloud</li>
+                                <li>IBM Cloud</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="../images/docker.png" alt="Docker" class="img-fluid mb-3" style="max-height: 60px;">
+                            <h3>Contenedores</h3>
+                            <ul class="list-unstyled">
+                                <li>Docker</li>
+                                <li>Kubernetes</li>
+                                <li>OpenShift</li>
+                                <li>Podman</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="../images/node.png" alt="Node.js" class="img-fluid mb-3" style="max-height: 60px;">
+                            <h3>Lenguajes</h3>
+                            <ul class="list-unstyled">
+                                <li>Node.js</li>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>Go</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusión -->
+        <section class="bg-light p-5 rounded-3">
+            <h2 class="section-title text-center">Conclusión</h2>
+            <p class="text-center fs-5">
+                El desarrollo de aplicaciones para la nube es una tendencia en constante crecimiento que permite a las empresas
+                innovar y adaptarse rápidamente a las necesidades del mercado. Adoptar este enfoque puede marcar una gran
+                diferencia en la competitividad y eficiencia de una organización.
+            </p>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

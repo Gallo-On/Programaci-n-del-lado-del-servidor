@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Formulario de Feedback</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CSS (versión correcta) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/diseño.css">
+</head>
+<body>
+  <!-- Navbar correcto para Bootstrap 5 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="https://github.com/Gallo-On">
+        <img src="../images/logo.png" alt="Logo" style="height: 20px;">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/webappis.html">WebAppis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/microservicios.html">Microservicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/nube.html">Apps de la nube</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/contenedores.html">Contenedores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="formulario.html">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Formulario</h1>
+    
+    <!-- Sección 1 -->
+    <div class="form-section">
+      <h3 class="form-title">¿Cuánto te ha gustado la página?</h3>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gusto" id="gusto1" value="mucho">
+        <label class="form-check-label" for="gusto1">Mucho</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gusto" id="gusto2" value="muchisimo">
+        <label class="form-check-label" for="gusto2">Muchísimo</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gusto" id="gusto3" value="no" disabled>
+        <label class="form-check-label" for="gusto3">No me gustó (miento)</label>
+      </div>
+    </div>
+
+    <!-- Sección 2 -->
+    <div class="form-section">
+      <h3 class="form-title">¿Has comprendido todos los temas?</h3>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="comprension" id="comprension1" value="si">
+        <label class="form-check-label" for="comprension1">Sí</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="comprension" id="comprension2" value="no">
+        <label class="form-check-label" for="comprension2">No (soy estúpido)</label>
+      </div>
+    </div>
+
+    <!-- Sección 3 -->
+    <div class="form-section">
+      <h3 class="form-title">¿Qué le pasa a Lupita?</h3>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="lupita" id="lupita1" value="nose">
+        <label class="form-check-label" for="lupita1">No sé</label>
+      </div>
+    </div>
+
+    <!-- Sección 4 -->
+    <div class="form-section">
+      <h3 class="form-title">¿Te interesa ser un programador backend o frontend?</h3>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="interes" id="interes1" value="backend">
+        <label class="form-check-label" for="interes1">Backend</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="interes" id="interes2" value="frontend">
+        <label class="form-check-label" for="interes2">Frontend</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="interes" id="interes3" value="diseno" disabled>
+        <label class="form-check-label" for="interes3">Diseñar (perdedor)</label>
+      </div>
+    </div>
+
+    <!-- Comentarios -->
+    <div class="form-section">
+      <h3 class="form-title">¿Cómo podemos mejorar?</h3>
+      <p class="text-muted">Favor de no poner groserías que soy sensible</p>
+      <div class="form-group">
+        <label for="comment" class="form-label">Tus comentarios:</label>
+        <textarea class="form-control" id="comment" rows="5" placeholder="Escribe tus sugerencias aquí..."></textarea>
+      </div>
+    </div>
+
+    <!-- Botón de enviar -->
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-primary btn-lg px-4">
+        <i class="bi bi-send-fill me-2"></i>Enviar Feedback
+      </button>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

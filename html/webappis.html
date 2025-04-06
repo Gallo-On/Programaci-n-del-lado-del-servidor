@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web APIs: Guía Profunda</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Íconos de Bootstrap (opcional) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../css/diseño.css">
+ 
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <!-- Logo que redirige al index -->
+      <a class="navbar-brand" href="https://github.com/Gallo-On">
+        <img src="../images/logo.png" alt="Logo" style="height: 20px;">
+      </a>
+
+      <!-- Botón para el menú desplegable en móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Contenido colapsable del menú -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <!-- Enlace a inicio -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <!-- Enlace a WebAppis -->
+          <li class="nav-item">
+            <a class="nav-link" href="../html/webappis.html">WebAppis</a>
+          </li>
+          <!-- Enlace a Microservicios -->
+          <li class="nav-item">
+            <a class="nav-link" href="../html/microservicios.html">Microservicios</a>
+          </li>
+          <!-- Enlace a Apps de la nube -->
+          <li class="nav-item">
+            <a class="nav-link" href="../html/nube.html">Apps de la nube</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/contenedores.html">Contenedores</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-4">Web APIs: El Corazón de la Web Moderna</h1>
+      <p class="lead">Conectando sistemas, potenciando aplicaciones</p>
+    </div>
+  </header>
+
+  <!-- Introducción -->
+  <section id="introduccion" class="py-5">
+    <div class="container">
+      <h2 class="section-title">¿Qué son las Web APIs?</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <p class="fs-5">
+            Las <strong>Web APIs</strong> (Interfaces de Programación de Aplicaciones) son conjuntos de protocolos y herramientas que permiten la comunicación entre diferentes sistemas de software a través de Internet. Actúan como intermediarios, facilitando el intercambio de datos entre clientes (como aplicaciones web o móviles) y servidores.
+          </p>
+          <p>
+            En la era de la web moderna, APIs como <strong>REST</strong>, <strong>GraphQL</strong> y <strong>gRPC</strong> se han convertido en estándares para construir aplicaciones escalables y desacopladas.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <!-- Espacio para imagen ilustrativa -->
+          <div class="img-container">
+            <img src="../images/api.webp" alt="Arquitectura de APIs" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipos de APIs -->
+  <section id="tipos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Tipos de Web APIs</h2>
+      <div class="row g-4">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-4">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <div class="text-center mb-3">
+                <i class="bi bi-arrow-left-right fs-1 text-primary"></i>
+              </div>
+              <h3 class="h5">RESTful APIs</h3>
+              <p>
+                Basadas en HTTP, usan verbos (GET, POST, etc.) y recursos identificables por URLs. Son stateless y cacheables.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="col-md-4">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <div class="text-center mb-3">
+                <i class="bi bi-diagram-2 fs-1 text-primary"></i>
+              </div>
+              <h3 class="h5">GraphQL</h3>
+              <p>
+                Permite a los clientes solicitar exactamente los datos que necesitan, evitando over-fetching o under-fetching.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="col-md-4">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <div class="text-center mb-3">
+                <i class="bi bi-lightning fs-1 text-primary"></i>
+              </div>
+              <h3 class="h5">gRPC</h3>
+              <p>
+                Desarrollado por Google, usa Protocol Buffers para comunicación binaria de alta performance entre servicios.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REST vs GraphQL -->
+  <section id="rest-vs-graphql" class="py-5">
+    <div class="container">
+      <h2 class="section-title">REST vs GraphQL: Comparación Técnica</h2>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h3 class="h4">Ventajas de REST</h3>
+          <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item">✔️ Simplicidad y amplia adopción</li>
+            <li class="list-group-item">✔️ Cacheado HTTP nativo</li>
+            <li class="list-group-item">✔️ Escalabilidad horizontal</li>
+          </ul>
+          <!-- Espacio para gráfico comparativo -->
+        </div>
+        <div class="col-lg-6">
+          <h3 class="h4">Ventajas de GraphQL</h3>
+          <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item">✔️ Flexibilidad en las consultas</li>
+            <li class="list-group-item">✔️ Menos llamadas al servidor</li>
+            <li class="list-group-item">✔️ Tipado fuerte con Schema</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Ejemplo de código -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <h3 class="h4">Ejemplo Práctico</h3>
+          <div class="code-block">
+            <p><strong>Consulta GraphQL vs Endpoint REST</strong></p>
+            <pre>
+// REST: Múltiples endpoints
+GET /api/users/123
+GET /api/users/123/posts
+
+// GraphQL: Una sola consulta
+query {
+  user(id: 123) {
+    name
+    email
+    posts {
+      title
+      createdAt
+    }
+  }
+}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos de Uso -->
+  <section id="ejemplos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Casos de Uso Reales</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="h5">Aplicaciones Móviles</h3>
+              <p>
+                Las Web APIs permiten que aplicaciones móviles ligeras consuman datos complejos desde servidores sin procesar lógica pesada en el dispositivo.
+              </p>
+              <!-- Espacio para screenshot de app -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="h5">Microservicios</h3>
+              <p>
+                En arquitecturas distribuidas, las APIs permiten que servicios independientes se comuniquen entre sí de manera estandarizada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<section id="introduccion" class="py-5">
+    <div class="container">
+      <h2 class="section-title">¿Cómo desarrollar una WebAppi?</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <p class="fs-5">
+            Las <strong>Web APIs</strong> (Interfaces de Programación de Aplicaciones) son conjuntos de protocolos y herramientas que permiten la comunicación entre diferentes sistemas de software a través de Internet. Actúan como intermediarios, facilitando el intercambio de datos entre clientes (como aplicaciones web o móviles) y servidores.
+          </p>
+          <p>
+            Desarrollar una WebAppi implica construir una aplicación web interactiva que se comunica con servidores a través de APIs. El proceso comienza con la definición de la funcionalidad y el diseño de la interfaz de usuario usando tecnologías como HTML, CSS y JavaScript. Luego, se implementan las conexiones con el backend mediante el consumo de APIs REST o GraphQL, utilizando herramientas como Fetch o Axios. También se puede usar un framework como React, Vue o Angular para organizar mejor el código. Finalmente, se realizan pruebas, se optimiza el rendimiento y se despliega la WebAppi en una plataforma de alojamiento como Vercel, Netlify o servicios en la nube.
+          </p>
+          
+        </div>
+        <div class="col-lg-6">
+          <!-- Espacio para imagen ilustrativa -->
+          <div class="img-container">
+            <img src="../images/apihow.jpg" alt="Arquitectura de APIs" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
