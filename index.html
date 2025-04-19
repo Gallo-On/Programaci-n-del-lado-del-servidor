@@ -19,7 +19,12 @@
       margin-bottom: 3rem;
       text-align: center;
     }
-    
+    h1,h2,h3,h4,h5,h6{
+      color: #ccced0;
+    }
+    p{
+      color:white;
+    }
     /* Tarjetas temáticas con efecto hover */
     .theme-card {
       border: none;
@@ -27,7 +32,7 @@
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
       height: 100%;
-      background-color: #f8f9fa;
+      background-color: #1f2022;
     }
     
     .theme-card:hover {
@@ -42,7 +47,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #e9ecef;
+      background-color: #1f2022;
     }
     
     .card-img-container img {
@@ -83,12 +88,26 @@
       height: 3px;
       background: #ff6600;
     }
+    body{
+      background-color: #121212;
+    }
+   
+    .navbar .nav-link {
+  color: #ccced0 !important;
+  background-color: #1f2022;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff !important; /* Opcional: blanco al pasar el mouse */
+}
+    
   </style>
 </head>
 
 <body>
   <!-- NAVBAR: Barra de navegación superior-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #1f2022;">
+
     <div class="container">
       <a class="navbar-brand" href="https://github.com/Gallo-On">
         <img src="images/logo.png" alt="Logo" style="height: 20px;">
@@ -242,7 +261,7 @@
     </section>
 
     <!-- Sección de información adicional -->
-    <section class="content-section bg-light rounded-3 p-4 mb-5">
+    <section class="content-section rounded-3 p-4 mb-5" style="background-color:#292b36;">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <h2 class="section-title">¿Por qué aprender backend?</h2>
