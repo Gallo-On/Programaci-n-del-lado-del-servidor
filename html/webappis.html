@@ -6,62 +6,40 @@
   <title>Web APIs: Guía Profunda</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Íconos de Bootstrap (opcional) -->
+  <!-- Íconos de Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../css/diseño.css">
- 
+  <link rel="stylesheet" href="../css/diseño.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #1f2022;">
     <div class="container">
-      <!-- Logo que redirige al index -->
       <a class="navbar-brand" href="https://github.com/Gallo-On">
         <img src="../images/logo.png" alt="Logo" style="height: 20px;">
       </a>
-
-      <!-- Botón para el menú desplegable en móviles -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Contenido colapsable del menú -->
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto">
-          <!-- Enlace a inicio -->
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Inicio</a>
-          </li>
-          <!-- Enlace a WebAppis -->
-          <li class="nav-item">
-            <a class="nav-link" href="../html/webappis.html">WebAppis</a>
-          </li>
-          <!-- Enlace a Microservicios -->
-          <li class="nav-item">
-            <a class="nav-link" href="../html/microservicios.html">Microservicios</a>
-          </li>
-          <!-- Enlace a Apps de la nube -->
-          <li class="nav-item">
-            <a class="nav-link" href="../html/nube.html">Apps de la nube</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../html/contenedores.html">Contenedores</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../html/webappis.html">Web APIs</a></li>
+          <li class="nav-item"><a class="nav-link" href="../html/microservicios.html">Microservicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="../html/nube.html">Apps de la Nube</a></li>
+          <li class="nav-item"><a class="nav-link" href="../html/contenedores.html">Contenedores</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero-section text-center">
+  <header class="hero-section text-center bg-light py-5">
     <div class="container">
-      <h1 class="display-3 fw-bold mb-4">Web APIs: El Corazón de la Web Moderna</h1>
+      <h1 class="display-3 fw-bold mb-4">Web APIs: Guía Profunda</h1>
       <p class="lead">Conectando sistemas, potenciando aplicaciones</p>
     </div>
   </header>
-
   <!-- Introducción -->
   <section id="introduccion" class="py-5">
     <div class="container">
@@ -69,66 +47,65 @@
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4">
           <p class="fs-5">
-            Las <strong>Web APIs</strong> (Interfaces de Programación de Aplicaciones) son conjuntos de protocolos y herramientas que permiten la comunicación entre diferentes sistemas de software a través de Internet. Actúan como intermediarios, facilitando el intercambio de datos entre clientes (como aplicaciones web o móviles) y servidores.
+            Las <strong>Web APIs</strong> son conjuntos de protocolos y herramientas que permiten la comunicación entre diferentes sistemas de software a través de Internet. Actúan como intermediarios, facilitando el intercambio de datos entre clientes y servidores.
           </p>
           <p>
-            En la era de la web moderna, APIs como <strong>REST</strong>, <strong>GraphQL</strong> y <strong>gRPC</strong> se han convertido en estándares para construir aplicaciones escalables y desacopladas.
+            En la era moderna, APIs como <strong>REST</strong>, <strong>SOAP</strong> y <strong>JWT</strong> se han convertido en estándares para construir aplicaciones escalables y seguras.
           </p>
         </div>
         <div class="col-lg-6">
-          <!-- Espacio para imagen ilustrativa -->
-          <div class="img-container">
-            <img src="../images/api.webp" alt="Arquitectura de APIs" class="img-fluid">
-          </div>
+          <img src="../images/api.webp" alt="Arquitectura de APIs" class="img-fluid">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Tipos de APIs -->
-  <section id="tipos" class="py-5 bg-light">
+  <!-- Protocolos Clave -->
+  <section id="protocolos" class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">Tipos de Web APIs</h2>
+      <h2 class="section-title">Protocolos y Tecnologías Clave</h2>
       <div class="row g-4">
-        <!-- Tarjeta 1 -->
-        <div class="col-md-4">
-          <div class="card feature-card h-100">
-            <div class="card-body">
-              <div class="text-center mb-3">
-                <i class="bi bi-arrow-left-right fs-1 text-primary"></i>
-              </div>
-              <h3 class="h5">RESTful APIs</h3>
-              <p>
-                Basadas en HTTP, usan verbos (GET, POST, etc.) y recursos identificables por URLs. Son stateless y cacheables.
-              </p>
+        <!-- Tarjeta HTTP -->
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-globe fs-1 text-primary"></i>
+              <h3 class="h5">HTTP</h3>
+              <p>Protocolo base para el intercambio de datos entre clientes y servidores.</p>
+              <a href="#http" class="btn btn-primary mt-3">Conocer más</a>
             </div>
           </div>
         </div>
-        <!-- Tarjeta 2 -->
-        <div class="col-md-4">
-          <div class="card feature-card h-100">
-            <div class="card-body">
-              <div class="text-center mb-3">
-                <i class="bi bi-diagram-2 fs-1 text-primary"></i>
-              </div>
-              <h3 class="h5">GraphQL</h3>
-              <p>
-                Permite a los clientes solicitar exactamente los datos que necesitan, evitando over-fetching o under-fetching.
-              </p>
+        <!-- Tarjeta SOAP -->
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-file-earmark-text fs-1 text-primary"></i>
+              <h3 class="h5">SOAP</h3>
+              <p>Protocolo XML estructurado para servicios empresariales.</p>
+              <a href="#soap" class="btn btn-primary mt-3">Conocer más</a>
             </div>
           </div>
         </div>
-        <!-- Tarjeta 3 -->
-        <div class="col-md-4">
-          <div class="card feature-card h-100">
-            <div class="card-body">
-              <div class="text-center mb-3">
-                <i class="bi bi-lightning fs-1 text-primary"></i>
-              </div>
-              <h3 class="h5">gRPC</h3>
-              <p>
-                Desarrollado por Google, usa Protocol Buffers para comunicación binaria de alta performance entre servicios.
-              </p>
+        <!-- Tarjeta REST -->
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-arrow-left-right fs-1 text-primary"></i>
+              <h3 class="h5">REST</h3>
+              <p>Arquitectura ligera que utiliza HTTP para la transferencia de datos.</p>
+              <a href="#rest" class="btn btn-primary mt-3">Conocer más</a>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta JWT -->
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-shield-lock fs-1 text-primary"></i>
+              <h3 class="h5">JWT</h3>
+              <p>Tokens seguros para autenticar usuarios en aplicaciones modernas.</p>
+              <a href="#jwt" class="btn btn-primary mt-3">Conocer más</a>
             </div>
           </div>
         </div>
@@ -136,111 +113,53 @@
     </div>
   </section>
 
-  <!-- REST vs GraphQL -->
-  <section id="rest-vs-graphql" class="py-5">
+  <!-- Detalles sobre los temas -->
+  <section id="http" class="py-5">
     <div class="container">
-      <h2 class="section-title">REST vs GraphQL: Comparación Técnica</h2>
-      <div class="row">
-        <div class="col-lg-6 mb-4">
-          <h3 class="h4">Ventajas de REST</h3>
-          <ul class="list-group list-group-flush mb-4">
-            <li class="list-group-item">✔️ Simplicidad y amplia adopción</li>
-            <li class="list-group-item">✔️ Cacheado HTTP nativo</li>
-            <li class="list-group-item">✔️ Escalabilidad horizontal</li>
-          </ul>
-          <!-- Espacio para gráfico comparativo -->
-        </div>
-        <div class="col-lg-6">
-          <h3 class="h4">Ventajas de GraphQL</h3>
-          <ul class="list-group list-group-flush mb-4">
-            <li class="list-group-item">✔️ Flexibilidad en las consultas</li>
-            <li class="list-group-item">✔️ Menos llamadas al servidor</li>
-            <li class="list-group-item">✔️ Tipado fuerte con Schema</li>
-          </ul>
-        </div>
-      </div>
-      <!-- Ejemplo de código -->
-      <div class="row mt-5">
-        <div class="col-12">
-          <h3 class="h4">Ejemplo Práctico</h3>
-          <div class="code-block">
-            <p><strong>Consulta GraphQL vs Endpoint REST</strong></p>
-            <pre>
-// REST: Múltiples endpoints
-GET /api/users/123
-GET /api/users/123/posts
-
-// GraphQL: Una sola consulta
-query {
-  user(id: 123) {
-    name
-    email
-    posts {
-      title
-      createdAt
-    }
-  }
-}</pre>
-          </div>
-        </div>
-      </div>
+      <h2>HTTP: Protocolo Base</h2>
+      <p>El Protocolo de Transferencia de Hipertexto (HTTP) es el estándar que define cómo se transmiten los datos entre clientes y servidores en la web. Es la base de la comunicación web, utilizando métodos como GET, POST y DELETE para manipular recursos específicos.</p>
+      <ul>
+        <li><strong>GET:</strong> Recupera datos del servidor.</li>
+        <li><strong>POST:</strong> Envía datos para ser procesados.</li>
+        <li><strong>DELETE:</strong> Elimina recursos específicos.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Casos de Uso -->
-  <section id="ejemplos" class="py-5 bg-light">
+  <section id="soap" class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">Casos de Uso Reales</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <h3 class="h5">Aplicaciones Móviles</h3>
-              <p>
-                Las Web APIs permiten que aplicaciones móviles ligeras consuman datos complejos desde servidores sin procesar lógica pesada en el dispositivo.
-              </p>
-              <!-- Espacio para screenshot de app -->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <h3 class="h5">Microservicios</h3>
-              <p>
-                En arquitecturas distribuidas, las APIs permiten que servicios independientes se comuniquen entre sí de manera estandarizada.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h2>SOAP: Protocolo XML</h2>
+      <p>SOAP (Simple Object Access Protocol) utiliza XML para estructurar mensajes en servicios web empresariales. Es conocido por su rigidez y alto nivel de seguridad.</p>
+      <ul>
+        <li><strong>Ventajas:</strong> Interoperabilidad y soporte para transacciones complejas.</li>
+        <li><strong>Desventajas:</strong> Más pesado en comparación con REST.</li>
+      </ul>
     </div>
   </section>
 
+  <section id="rest" class="py-5">
+    <div class="container">
+      <h2>REST: Arquitectura Ligera</h2>
+      <p>REST (Representational State Transfer) es un estilo arquitectónico que se centra en la comunicación entre sistemas utilizando métodos HTTP y recursos identificables por URLs.</p>
+      <ul>
+        <li><strong>Stateless:</strong> Cada solicitud es independiente.</li>
+        <li><strong>Cacheable:</strong> Facilita el almacenamiento en caché para optimizar el rendimiento.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="jwt" class="py-5 bg-light">
+    <div class="container">
+      <h2>JWT: Tokens Compactos</h2>
+      <p>JWT (JSON Web Tokens) se utiliza para la autenticación y autorización de usuarios. Proporciona un token seguro que contiene datos codificados, como el ID de usuario.</p>
+      <ul>
+        <li><strong>Seguridad:</strong> Basado en firmas digitales.</li>
+        <li><strong>Compacto:</strong> Fácil de transmitir en encabezados HTTP.</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<section id="introduccion" class="py-5">
-    <div class="container">
-      <h2 class="section-title">¿Cómo desarrollar una WebAppi?</h2>
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4">
-          <p class="fs-5">
-            Las <strong>Web APIs</strong> (Interfaces de Programación de Aplicaciones) son conjuntos de protocolos y herramientas que permiten la comunicación entre diferentes sistemas de software a través de Internet. Actúan como intermediarios, facilitando el intercambio de datos entre clientes (como aplicaciones web o móviles) y servidores.
-          </p>
-          <p>
-            Desarrollar una WebAppi implica construir una aplicación web interactiva que se comunica con servidores a través de APIs. El proceso comienza con la definición de la funcionalidad y el diseño de la interfaz de usuario usando tecnologías como HTML, CSS y JavaScript. Luego, se implementan las conexiones con el backend mediante el consumo de APIs REST o GraphQL, utilizando herramientas como Fetch o Axios. También se puede usar un framework como React, Vue o Angular para organizar mejor el código. Finalmente, se realizan pruebas, se optimiza el rendimiento y se despliega la WebAppi en una plataforma de alojamiento como Vercel, Netlify o servicios en la nube.
-          </p>
-          
-        </div>
-        <div class="col-lg-6">
-          <!-- Espacio para imagen ilustrativa -->
-          <div class="img-container">
-            <img src="../images/apihow.jpg" alt="Arquitectura de APIs" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
