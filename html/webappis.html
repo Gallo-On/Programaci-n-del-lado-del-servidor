@@ -11,6 +11,82 @@
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="../css/diseño.css">
 </head>
+<style>
+  :root {
+    /* Modo claro (default) */
+    --bg-color: #ffffff;
+    --text-color: #1f2022;
+    --card-bg: #f8f9fa;
+    --link-color: #0d6efd;
+    --navbar-bg: #f8f9fa;
+    --navbar-text: #1f2022;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Modo oscuro */
+      --bg-color: #1f2022;
+      --text-color: #ccced0;
+      --card-bg: #2d2f31;
+      --link-color: #6ea8fe;
+      --navbar-bg: #1f2022;
+      --navbar-text: #ccced0;
+    }
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  .navbar {
+    background-color: var(--navbar-bg) !important;
+  }
+
+  .navbar .nav-link {
+    color: var(--navbar-text) !important;
+  }
+
+  .navbar .nav-link:hover {
+    color: var(--link-color) !important;
+  }
+
+  .card {
+    background-color: var(--card-bg);
+    border-color: rgba(255, 255, 255, 0.125);
+  }
+
+  .card i {
+    color: var(--link-color);
+  }
+
+  .btn-primary {
+    background-color: var(--link-color);
+    border-color: var(--link-color);
+  }
+
+  .bg-light {
+    background-color: var(--card-bg) !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+  }
+  .navbar{
+  background-color: #1f2022;
+}
+.navbar .nav-link {
+  color: #ccced0 !important;
+  
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff !important; /* Opcional: blanco al pasar el mouse */
+}
+h1,h2,h3,h4,h5,h6{
+      color: #ccced0;
+    }
+  </style>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #1f2022;">
@@ -24,7 +100,7 @@
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="../html/webappis.html">Web APIs</a></li>
+          <li class="nav-item"><a class="nav-link" href="../html/webappis.html">WebAppis</a></li>
           <li class="nav-item"><a class="nav-link" href="../html/microservicios.html">Microservicios</a></li>
           <li class="nav-item"><a class="nav-link" href="../html/nube.html">Apps de la Nube</a></li>
           <li class="nav-item"><a class="nav-link" href="../html/contenedores.html">Contenedores</a></li>
@@ -36,7 +112,7 @@
   <!-- Hero Section -->
   <header class="hero-section text-center bg-light py-5">
     <div class="container">
-      <h1 class="display-3 fw-bold mb-4">Web APIs: Guía Profunda</h1>
+      <h1 class="display-3 fw-bold mb-4">WebAppis: Guía Profunda</h1>
       <p class="lead">Conectando sistemas, potenciando aplicaciones</p>
     </div>
   </header>
@@ -163,3 +239,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
